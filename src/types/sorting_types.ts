@@ -1,9 +1,8 @@
 
 
-export type sorting_history = {
-    sortingList: number[];
-    comparison: number[];
-    swapps: number[];
+export type operation_history = {
+    type: "comparison" | "swapps";
+    indices: number[];
 }
 
 export type sortAlgorithmName = 
@@ -15,4 +14,4 @@ export type sortAlgorithmName =
 
 export type sortAlgorithm = (
     input: number[]
-) => sorting_history[];
+) => operation_history[];
